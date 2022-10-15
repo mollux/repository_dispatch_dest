@@ -17,4 +17,4 @@ jobs:
           replace-with: '$1.x'
       - uses: actions/checkout@v3
       - name: Checkout branch
-        run: git checkout -B ${{ steps.branch.outputs.value }}
+        run: git checkout -B ${{ steps.branch.outputs.replaced }}
