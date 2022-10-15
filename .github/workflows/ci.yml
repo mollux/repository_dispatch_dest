@@ -6,5 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: React on dispatched event
     steps:
       - uses: hmarr/debug-action@v2
+      - run: echo ${{ github.event }}
