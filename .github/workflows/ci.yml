@@ -10,14 +10,11 @@ jobs:
     steps:
       - name: generate name of branch
         id: branch
-        uses: ashley-taylor/regex-property-action@v1.2
+        uses: frabert/replace-string-action@v2.0
         with:
-          value: 
-          uses: frabert/replace-string-action@v2.0
-          with:
-            pattern: '(\d+\.\d+)\.\d+'
-            string: "${{ github.event.client_payload.ref }}"
-            replace-with: '$1.x'
+          pattern: '(\d+\.\d+)\.\d+'
+          string: "${{ github.event.client_payload.ref }}"
+          replace-with: '$1.x'
       - uses: actions/checkout@v3
       - name: Checkout branch
         run: git checkout -B ${{ steps.branch.outputs.value }}
