@@ -2,7 +2,6 @@
   "name": "mollux/test-package",
   "description": "Project template for Mautic 4 projects with composer",
   "type": "project",
-  "ve"
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.mautic.org/mautic-releases",
   "support": {
